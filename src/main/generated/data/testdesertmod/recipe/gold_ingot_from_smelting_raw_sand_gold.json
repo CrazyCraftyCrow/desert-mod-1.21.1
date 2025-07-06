@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "gold_ingot",
+  "ingredient": {
+    "item": "testdesertmod:raw_sand_gold"
+  },
+  "result": {
+    "id": "minecraft:gold_ingot"
+  }
+}
