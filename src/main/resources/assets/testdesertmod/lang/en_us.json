@@ -1,5 +1,8 @@
 {
   "item.testdesertmod.raw_sand_gold": "Raw Sand Gold",
+  "item.testdesertmod.desert_rain_frog_spawn_egg": "Desert Rain Frog Spawn Egg",
 
-  "block.testdesertmod.sand_gold_ore": "Sand Gold Ore"
+  "block.testdesertmod.sand_gold_ore": "Sand Gold Ore",
+
+  "entity.testdesertmod.desert_rain_frog": "Desert Rain Frog"
 }
