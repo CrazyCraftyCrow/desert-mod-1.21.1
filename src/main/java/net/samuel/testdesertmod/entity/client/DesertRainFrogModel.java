@@ -2,6 +2,7 @@ package net.samuel.testdesertmod.entity.client;
 
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
+import net.minecraft.client.render.entity.animation.Animation;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
@@ -11,7 +12,7 @@ import net.samuel.testdesertmod.TestDesertMod;
 import net.samuel.testdesertmod.entity.custom.DesertRainFrogEntity;
 
 
-    public class DesertRainFrogModel <T extends DesertRainFrogEntity> extends SinglePartEntityModel<T>{
+public class DesertRainFrogModel <T extends DesertRainFrogEntity> extends SinglePartEntityModel<T>{
 
         public static final EntityModelLayer DESERT_RAIN_FROG = new EntityModelLayer(Identifier.of(TestDesertMod.MOD_ID, "desert_rain_frog"), "main");
 
@@ -47,9 +48,13 @@ import net.samuel.testdesertmod.entity.custom.DesertRainFrogEntity;
             this.getPart().traverse().forEach(ModelPart::resetTransform);
             this.setHeadAngles(netHeadYaw, headPitch);
 
+
             this.animateMovement(DesertRainFrogAnimations.ANIM_DESERT_RAIN_FROG_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
             this.updateAnimation(entity.idleAnimationState, DesertRainFrogAnimations.ANIM_DESERT_RAIN_FROG_IDLE, ageInTicks, 1f);
+            this.updateAnimation(entity.burrowedAnimationState, DesertRainFrogAnimations.BURROWINGDOWN, ageInTicks, 1f);
+
         }
+
 
         private void setHeadAngles(float headYaw, float headPitch) {
             headYaw = MathHelper.clamp(headYaw, -30.0F, 30.0F);

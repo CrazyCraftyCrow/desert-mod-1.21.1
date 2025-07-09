@@ -13,7 +13,7 @@ public class ModEntities {
     public static  final EntityType<DesertRainFrogEntity> DESERT_RAIN_FROG = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(TestDesertMod.MOD_ID, "desert_rain_frog"),
             EntityType.Builder.create(DesertRainFrogEntity::new, SpawnGroup.CREATURE)
-                    .dimensions(1f,1f).build());
+                    .dimensions(0.25f,0.25f).build());
 
     public static void registerModEntities() {
         TestDesertMod.LOGGER.info("Registering Mod Entities for " + TestDesertMod.MOD_ID);
