@@ -1,8 +1,10 @@
 {
   "item.testdesertmod.raw_sand_gold": "Raw Sand Gold",
   "item.testdesertmod.desert_rain_frog_spawn_egg": "Desert Rain Frog Spawn Egg",
+  "item.testdesertmod.frog_leg": "Frog's Leg",
 
   "block.testdesertmod.sand_gold_ore": "Sand Gold Ore",
+  "block.testdesertmod.quick_sand": "Quick Sand",
 
   "entity.testdesertmod.desert_rain_frog": "Desert Rain Frog"
 }

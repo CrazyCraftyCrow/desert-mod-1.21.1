@@ -16,5 +16,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
         addDrop(ModBlocks.SAND_GOLD_ORE, oreDrops(ModBlocks.SAND_GOLD_ORE, ModItems.RAW_SAND_GOLD));
+        addDrop(ModBlocks.QUICK_SAND, drops(ModBlocks.QUICK_SAND));
     }
 }

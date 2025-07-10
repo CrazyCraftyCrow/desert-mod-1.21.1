@@ -1,9 +1,9 @@
 {
-  "feature": "testdesertmod:sand_gold_ore",
+  "feature": "testdesertmod:quick_sand_key",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 15
+      "count": 1
     },
     {
       "type": "minecraft:in_square"

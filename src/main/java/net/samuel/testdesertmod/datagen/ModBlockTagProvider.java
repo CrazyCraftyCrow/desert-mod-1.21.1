@@ -16,7 +16,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
-                .add(ModBlocks.SAND_GOLD_ORE);
+                .add(ModBlocks.SAND_GOLD_ORE)
+                .add(ModBlocks.QUICK_SAND);
 
     }
 }

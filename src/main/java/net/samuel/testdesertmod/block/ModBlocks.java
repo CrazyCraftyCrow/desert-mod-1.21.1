@@ -2,9 +2,7 @@ package net.samuel.testdesertmod.block;
 
 import com.mojang.serialization.MapCodec;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.FallingBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -13,6 +11,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.samuel.testdesertmod.TestDesertMod;
+
+import static net.minecraft.block.Blocks.register;
 
 public class ModBlocks {
 
@@ -24,6 +24,12 @@ public class ModBlocks {
                     return null;
                 }
             });
+
+    public static final Block QUICK_SAND = registerBlock("quick_sand",
+            new QuickSandBlock(
+                    AbstractBlock.Settings.create().strength(0.5f).requiresTool().velocityMultiplier(0.4F).jumpVelocityMultiplier(0.5F).nonOpaque().sounds(BlockSoundGroup.SAND)
+            )
+    );
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -40,6 +46,10 @@ public class ModBlocks {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.SAND_GOLD_ORE);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
+            entries.add(ModBlocks.QUICK_SAND);
         });
     }
 }

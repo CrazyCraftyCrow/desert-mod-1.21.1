@@ -19,12 +19,17 @@ import net.samuel.testdesertmod.TestDesertMod;
 public class ModPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> SAND_GOLD_ORE_PLACED_KEY = registerKey("sand_gold_ore_placed");
+    public static final RegistryKey<PlacedFeature> QUICK_SAND_PLACED_KEY = registerKey("quick_sand_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, SAND_GOLD_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SAND_GOLD_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(10,
+                ModOrePlacement.modifiersWithCount(15,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(60), YOffset.fixed(90))));
+
+        register(context, QUICK_SAND_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.QUICK_SAND_KEY),
+                ModOrePlacement.modifiersWithCount(1,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(60), YOffset.fixed(90))));
 
     }

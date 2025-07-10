@@ -19,6 +19,7 @@ import java.util.List;
 public class ModConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> SAND_GOLD_ORE_KEY = registerKey("sand_gold_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> QUICK_SAND_KEY = registerKey("quick_sand_key");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest sandReplaceables = new BlockMatchRuleTest(Blocks.SAND);
@@ -26,7 +27,11 @@ public class ModConfiguredFeatures {
         List<OreFeatureConfig.Target> overworldSandGoldOres =
                 List.of(OreFeatureConfig.createTarget(sandReplaceables, ModBlocks.SAND_GOLD_ORE.getDefaultState()));
 
+        List<OreFeatureConfig.Target> overworldQuickSand =
+                List.of(OreFeatureConfig.createTarget(sandReplaceables, ModBlocks.QUICK_SAND.getDefaultState()));
+
         register(context,SAND_GOLD_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldSandGoldOres, 3));
+        register(context,QUICK_SAND_KEY, Feature.ORE, new OreFeatureConfig(overworldQuickSand, 20));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

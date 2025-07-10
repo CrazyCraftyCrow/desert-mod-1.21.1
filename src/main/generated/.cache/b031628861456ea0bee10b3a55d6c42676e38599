@@ -1,6 +1,10 @@
-// 1.21.1	2025-07-09T15:34:10.0563768	Test Desert Mod/Model Definitions
+// 1.21.1	2025-07-10T17:18:06.0505722	Test Desert Mod/Model Definitions
 296f9c24073216b0a126673732fba3a8c347f3e3 assets\testdesertmod\models\item\raw_sand_gold.json
 d674ad7a4b99ce5a2f5eef6638955d36eec7026c assets\testdesertmod\models\block\sand_gold_ore.json
+3cf9917f6281614be76721c8397e8648789a17f8 assets\testdesertmod\models\block\quick_sand.json
+6290d759a39fd02e444c51523b6300d557a72460 assets\testdesertmod\models\item\quick_sand.json
+2f16741383083ed05c2bec9b350b09e2811ce3ea assets\testdesertmod\blockstates\quick_sand.json
 f86ae8e56dfb10d413b8dfff5640d5226b98f2d3 assets\testdesertmod\models\item\sand_gold_ore.json
 bd524af132bc95254986ca77fafb01410cb1db99 assets\testdesertmod\blockstates\sand_gold_ore.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets\testdesertmod\models\item\desert_rain_frog_spawn_egg.json
+3bc1edd1651980a41c6678ee849d31568121ad17 assets\testdesertmod\models\item\frog_leg.json

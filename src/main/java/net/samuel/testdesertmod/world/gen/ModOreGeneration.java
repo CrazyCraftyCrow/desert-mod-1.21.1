@@ -10,5 +10,8 @@ public class ModOreGeneration {
     public static void generateOres() {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DESERT), GenerationStep.Feature.UNDERGROUND_ORES,
                 ModPlacedFeatures.SAND_GOLD_ORE_PLACED_KEY);
+
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DESERT), GenerationStep.Feature.UNDERGROUND_ORES,
+                ModPlacedFeatures.QUICK_SAND_PLACED_KEY);
     }
 }

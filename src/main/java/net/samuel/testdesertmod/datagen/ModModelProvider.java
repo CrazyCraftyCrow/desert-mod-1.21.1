@@ -20,12 +20,14 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SAND_GOLD_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUICK_SAND);
 
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.RAW_SAND_GOLD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FROG_LEG, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.DESERT_RAIN_FROG_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
