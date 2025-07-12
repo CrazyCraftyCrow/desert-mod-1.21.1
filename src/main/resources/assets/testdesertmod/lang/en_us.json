@@ -2,6 +2,13 @@
   "item.testdesertmod.raw_sand_gold": "Raw Sand Gold",
   "item.testdesertmod.desert_rain_frog_spawn_egg": "Desert Rain Frog Spawn Egg",
   "item.testdesertmod.frog_leg": "Frog's Leg",
+  "item.testdesertmod.frog_on_stick": "Frog On Stick",
+  "item.testdesertmod.broken_ancient_axe": "Broken Ancient Axe",
+  "item.testdesertmod.ancient_axe_bottom": "§rAncient §kAxe",
+  "item.testdesertmod.ancient_axe_top": "§kAncient §rAxe",
+  "item.testdesertmod.redstone_upgrade_smithing_template": "Redstone Upgrade Smithing Template",
+
+  "item.testdesertmod.ancient_axe": "Ancient Axe",
 
   "block.testdesertmod.sand_gold_ore": "Sand Gold Ore",
   "block.testdesertmod.quick_sand": "Quick Sand",

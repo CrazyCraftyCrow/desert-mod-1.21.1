@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "testdesertmod:item/ancient_axe_top"
+  }
+}

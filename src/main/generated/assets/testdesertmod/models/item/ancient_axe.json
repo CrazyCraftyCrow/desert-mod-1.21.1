@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "testdesertmod:item/ancient_axe"
+  }
+}

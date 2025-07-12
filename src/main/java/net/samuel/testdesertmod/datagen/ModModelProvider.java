@@ -27,7 +27,15 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.RAW_SAND_GOLD, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.FROG_LEG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FROG_ON_STICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ANCIENT_AXE_BOTTOM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ANCIENT_AXE_TOP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BROKEN_ANCIENT_AXE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.REDSTONE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.ANCIENT_AXE, Models.HANDHELD);
 
         itemModelGenerator.register(ModItems.DESERT_RAIN_FROG_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));

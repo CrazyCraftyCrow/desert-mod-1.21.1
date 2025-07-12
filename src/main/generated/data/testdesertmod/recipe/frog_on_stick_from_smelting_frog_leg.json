@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "frog_on_stick",
+  "ingredient": {
+    "item": "testdesertmod:frog_leg"
+  },
+  "result": {
+    "id": "testdesertmod:frog_on_stick"
+  }
+}

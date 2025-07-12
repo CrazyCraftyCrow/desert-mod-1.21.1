@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:redstone_block"
+  },
+  "base": {
+    "item": "testdesertmod:broken_ancient_axe"
+  },
+  "result": {
+    "count": 1,
+    "id": "testdesertmod:ancient_axe"
+  },
+  "template": {
+    "item": "testdesertmod:redstone_upgrade_smithing_template"
+  }
+}

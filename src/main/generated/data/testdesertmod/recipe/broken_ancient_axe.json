@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "testdesertmod:ancient_axe_bottom"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "testdesertmod:ancient_axe_top"
+    }
+  },
+  "pattern": [
+    "T",
+    "S",
+    "B"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testdesertmod:broken_ancient_axe"
+  }
+}
