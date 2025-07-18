@@ -12,6 +12,8 @@
 
   "block.testdesertmod.sand_gold_ore": "Sand Gold Ore",
   "block.testdesertmod.quick_sand": "Quick Sand",
+  "block.testdesertmod.dried_grass": "Dried Grass",
+  "block.testdesertmod.short_dried_grass": "Short Dried Grass",
 
   "entity.testdesertmod.desert_rain_frog": "Desert Rain Frog"
 }

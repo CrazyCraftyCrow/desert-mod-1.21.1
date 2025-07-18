@@ -3,6 +3,7 @@ package net.samuel.testdesertmod.block;
 import com.mojang.serialization.MapCodec;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -31,6 +32,30 @@ public class ModBlocks {
             )
     );
 
+    public static final Block DRIED_GRASS = registerBlock("dried_grass",
+            new DeadBushBlock(
+                    AbstractBlock.Settings.create()
+                            .replaceable()
+                            .noCollision()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+
+    public static final Block SHORT_DRIED_GRASS = registerBlock("short_dried_grass",
+            new DeadBushBlock(
+                    AbstractBlock.Settings.create()
+                            .replaceable()
+                            .noCollision()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(TestDesertMod.MOD_ID, name), block);
@@ -46,6 +71,8 @@ public class ModBlocks {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.SAND_GOLD_ORE);
+            entries.add(ModBlocks.DRIED_GRASS);
+            entries.add(ModBlocks.SHORT_DRIED_GRASS);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {

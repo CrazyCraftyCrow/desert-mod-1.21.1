@@ -21,7 +21,8 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SAND_GOLD_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUICK_SAND);
-
+        blockStateModelGenerator.registerTintableCross(ModBlocks.DRIED_GRASS, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.SHORT_DRIED_GRASS, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override

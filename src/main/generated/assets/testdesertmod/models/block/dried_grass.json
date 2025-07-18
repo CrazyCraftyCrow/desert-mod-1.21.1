@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "testdesertmod:block/dried_grass"
+  }
+}

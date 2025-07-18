@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "testdesertmod:desert_tample",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 40,
+    "separation": 10,
+    "salt": 0
+  }
+}
