@@ -36,8 +36,8 @@ public class SandWeaverEntity extends AnimalEntity {
     private int idleAnimationTimeout = 0;
     public int attackAnimationTimeout = 0;
 
-    public static final int MIN_TICKS_UNTIL_NEXT_BURROWING = 600;
-    public static final int MAX_TICKS_UNTIL_NEXT_BURROWING = 1200;
+    public static final int MIN_TICKS_UNTIL_NEXT_BURROWING = 10;
+    public static final int MAX_TICKS_UNTIL_NEXT_BURROWING = 20;
 
     private static final String IS_BURROWED_DOWN_NBT_NAME = "IsBurrowedDown";
     private static final String TICKS_UNTIL_NEXT_BURROWING_DOWN_NBT_NAME = "TicksUntilNextBurrowingDown";
@@ -108,24 +108,26 @@ public class SandWeaverEntity extends AnimalEntity {
 
         this.goalSelector.add(3, new FollowParentGoal(this, 1.1D));
 
-        this.goalSelector.add(4, new WanderAroundFarGoal(this, 1.0D));
         this.goalSelector.add(4, new SandweaverAttackGoal(this, 1.0, true));
-        this.goalSelector.add(5, new LookAroundGoal(this));
+        this.goalSelector.add(5, new WanderAroundFarGoal(this, 1.0D));
+        this.goalSelector.add(6, new LookAroundGoal(this));
+
         this.sandyBurrowDownGoal = new WeaverBurrowDownGoal(this);
-        this.goalSelector.add(6, this.sandyBurrowDownGoal);
+        this.goalSelector.add(7, this.sandyBurrowDownGoal);
         this.targetSelector.add(1, new ActiveTargetGoal(this, PlayerEntity.class, true));
-        this.targetSelector.add(2, new ActiveTargetGoal(this, RabbitEntity.class, true));
         this.targetSelector.add(2, new ActiveTargetGoal(this, ZombieEntity.class, true));
         this.targetSelector.add(2, new ActiveTargetGoal(this, HuskEntity.class, true));
-        this.targetSelector.add(2, new ActiveTargetGoal(this, DesertRainFrogEntity.class, true));
+        this.targetSelector.add(3, new ActiveTargetGoal(this, RabbitEntity.class, true));
+        this.targetSelector.add(3, new ActiveTargetGoal(this, DesertRainFrogEntity.class, true));
     }
 
     public static DefaultAttributeContainer.Builder createAttributes() {
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 30)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.20)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 5)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 10);
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 10)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 10)
+                .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 0.5);
     }
 
     private void setupAnimationStates() {
