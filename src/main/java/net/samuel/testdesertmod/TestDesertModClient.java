@@ -9,12 +9,17 @@ import net.samuel.testdesertmod.block.ModBlocks;
 import net.samuel.testdesertmod.entity.ModEntities;
 import net.samuel.testdesertmod.entity.client.DesertRainFrogModel;
 import net.samuel.testdesertmod.entity.client.DesertRainFrogRenderer;
+import net.samuel.testdesertmod.entity.client.SandWeaverModel;
+import net.samuel.testdesertmod.entity.client.SandWeaverRenderer;
 
 public class TestDesertModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         EntityModelLayerRegistry.registerModelLayer(DesertRainFrogModel.DESERT_RAIN_FROG, DesertRainFrogModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.DESERT_RAIN_FROG, DesertRainFrogRenderer::new);
+
+        EntityModelLayerRegistry.registerModelLayer(SandWeaverModel.SANDWEAVER, SandWeaverModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.SANDWEAVER, SandWeaverRenderer::new);
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DRIED_GRASS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SHORT_DRIED_GRASS, RenderLayer.getCutout());

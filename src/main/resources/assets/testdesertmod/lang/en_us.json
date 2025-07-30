@@ -1,6 +1,7 @@
 {
   "item.testdesertmod.raw_sand_gold": "Raw Sand Gold",
   "item.testdesertmod.desert_rain_frog_spawn_egg": "Desert Rain Frog Spawn Egg",
+  "item.testdesertmod.sandweaver_egg": "Sandweaver Egg",
   "item.testdesertmod.frog_leg": "Frog's Leg",
   "item.testdesertmod.frog_on_stick": "Frog On Stick",
   "item.testdesertmod.broken_ancient_axe": "Broken Ancient Axe",
@@ -15,5 +16,6 @@
   "block.testdesertmod.dried_grass": "Dried Grass",
   "block.testdesertmod.short_dried_grass": "Short Dried Grass",
 
-  "entity.testdesertmod.desert_rain_frog": "Desert Rain Frog"
+  "entity.testdesertmod.desert_rain_frog": "Desert Rain Frog",
+  "entity.testdesertmod.sandweaver": "Sandweaver"
 }

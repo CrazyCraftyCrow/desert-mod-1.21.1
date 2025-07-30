@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRe
 import net.samuel.testdesertmod.block.ModBlocks;
 import net.samuel.testdesertmod.entity.ModEntities;
 import net.samuel.testdesertmod.entity.custom.DesertRainFrogEntity;
+import net.samuel.testdesertmod.entity.custom.SandWeaverEntity;
 import net.samuel.testdesertmod.item.ModItems;
 import net.samuel.testdesertmod.util.ModLootTableModifiers;
 import net.samuel.testdesertmod.world.gen.ModWorldGeneration;
@@ -27,5 +28,6 @@ public class TestDesertMod implements ModInitializer {
 		ModEntities.registerModEntities();
 
 		FabricDefaultAttributeRegistry.register(ModEntities.DESERT_RAIN_FROG, DesertRainFrogEntity.createAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.SANDWEAVER, SandWeaverEntity.createAttributes());
 	}
 }

@@ -23,6 +23,9 @@ public class ModItems {
     public static final Item DESERT_RAIN_FROG_EGG = registerItem("desert_rain_frog_spawn_egg",
             new SpawnEggItem(ModEntities.DESERT_RAIN_FROG, 0x9dc783, 0xbfaf5f, new Item.Settings()));
 
+    public static final Item SANDWEAVER_EGG = registerItem("sandweaver_egg",
+            new SpawnEggItem(ModEntities.SANDWEAVER, 0x9dc783, 0xbfaf5f, new Item.Settings()));
+
     public static final Item ANCIENT_AXE = registerItem("ancient_axe",
             new AxeItem(ModToolMaterials.REDSTONE, new Item.Settings()
                     .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.REDSTONE, 5.0F, -3.0F))));
@@ -50,6 +53,7 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(entries -> {
             entries.add(DESERT_RAIN_FROG_EGG);
+            entries.add(SANDWEAVER_EGG);
         });
     }
 }

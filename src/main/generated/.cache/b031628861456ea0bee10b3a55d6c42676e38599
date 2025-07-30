@@ -1,5 +1,6 @@
-// 1.21.1	2025-07-19T17:01:36.0583148	Test Desert Mod/Model Definitions
+// 1.21.1	2025-07-27T18:48:50.6353467	Test Desert Mod/Model Definitions
 6491dc96709cfbdd019a6c694e524938e6a75230 assets\testdesertmod\models\block\short_dried_grass.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets\testdesertmod\models\item\sandweaver_egg.json
 296f9c24073216b0a126673732fba3a8c347f3e3 assets\testdesertmod\models\item\raw_sand_gold.json
 80e43aa7083e0c132a86d0615894df35b11bf4a9 assets\testdesertmod\models\item\redstone_upgrade_smithing_template.json
 d674ad7a4b99ce5a2f5eef6638955d36eec7026c assets\testdesertmod\models\block\sand_gold_ore.json
