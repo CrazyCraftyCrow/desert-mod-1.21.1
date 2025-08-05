@@ -125,7 +125,7 @@ public class SandWeaverModel<T extends SandWeaverEntity> extends SinglePartEntit
 
     private void setHeadAngles(float headYaw, float headPitch) {
         headYaw = MathHelper.clamp(headYaw, -20.0F, 20.0F);
-        headPitch = MathHelper.clamp(headPitch, -25.0F, 45.0F);
+        headPitch = MathHelper.clamp(headPitch, -20.0F, 20.0F);
 
         this.head.yaw = headYaw * 0.017453292F;
         this.head.pitch = headPitch * 0.017453292F;

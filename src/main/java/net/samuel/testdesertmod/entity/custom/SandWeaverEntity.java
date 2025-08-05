@@ -3,6 +3,7 @@ package net.samuel.testdesertmod.entity.custom;
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -21,8 +22,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 import net.samuel.testdesertmod.entity.ModEntities;
 import net.samuel.testdesertmod.entity.ai.goal.SandweaverAttackGoal;
 import net.samuel.testdesertmod.entity.ai.goal.WeaverBurrowDownGoal;
@@ -250,5 +255,9 @@ public class SandWeaverEntity extends AnimalEntity {
 
     public boolean isBurrowing() {
         return this.dataTracker.get(IS_BURROWED_DOWN);
+    }
+
+    public static boolean canSpawn(EntityType<SandWeaverEntity> entity, WorldAccess world, SpawnReason spawnReason, BlockPos pos, Random random) {
+        return world.getBlockState(pos.down()).isIn(BlockTags.RABBITS_SPAWNABLE_ON) && isLightLevelValidForNaturalSpawn(world, pos);
     }
 }

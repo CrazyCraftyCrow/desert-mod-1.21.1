@@ -23,6 +23,9 @@
 		],
 		"client": [
 			"net.samuel.testdesertmod.TestDesertModClient"
+		],
+		"terrablender": [
+			"net.samuel.testdesertmod.TestModTerraBlenderAPI"
 		]
 	},
 	"mixins": [
